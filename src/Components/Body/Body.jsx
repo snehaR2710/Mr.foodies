@@ -48,7 +48,7 @@ useEffect(() => {
             // console.log("response:-", response.data);
             const resListsFromData = response.data.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants;
             // const resListsFromData = response.data.data?.success?.cards[4]?.gridWidget?.gridElements?.infoWithStyle?.restaurants
-            console.log("next page data:- ", resListsFromData);
+            console.log("next page data:- ", resListsFromData || {});
             const nextPageData = response.data?.data?.pageOffset?.nextOffset;
             setNextOffSet(nextPageData);
             setListOfRestaurent(resListsFromData);
@@ -64,7 +64,6 @@ useEffect(() => {
         if (!nextOffSet) return;
 
         try {
-            // /api/dapi/restaurants/list/v5?lat=12.9351929&lng=77.62448069999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING&offset=${nextOffSet}
             const response = await axios.get("/api/dapi/restaurants/list/v5", {
                 params: {
                     lat: 12.9351929,
@@ -92,17 +91,15 @@ useEffect(() => {
   
 
     return(
-    <div className="">
-        {/* <Shimmer/> */}
+    <div>
         {loading ? (
             <Shimmer />
             // {}
         ) : (
-            // ${listOfRestaurents && listOfRestaurents.length >  0 ? '2000px' : '5000px'}
-            <div className={`flex justify-center items-center gap-14 flex-wrap mt-8 ml-10 mr-10 mb-10 md:min-h-[425.5px] `}>
+            <div className={` flex justify-center items-center gap-14 flex-wrap mt-8 ml-10 mr-10 mb-10 md:min-h-[425.5px] `} data-testid="restaurant-list">
                 {
                    listOfRestaurents && listOfRestaurents.map((restaurant) => (
-                        <Link style={{ textDecoration: 'none' }} key={restaurant.info.id} to={`/restaurant/${restaurant && restaurant.info?.id}`}>
+                        <Link style={{ textDecoration: 'none' }} key={restaurant.info.id} to={`/restaurant/${restaurant && restaurant.info?.id}`} data-testid="loading-indicator">
                             <RestaurantCards key={restaurant.info.id} resData={restaurant}/>
                         </Link>
                     ))}

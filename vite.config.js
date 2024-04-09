@@ -1,14 +1,11 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-
-
 // https://vitejs.dev/config/
 export default defineConfig({
-
   server: {
     proxy: {
       '/api': {
-        target: 'https://www.swiggy.com',
+        target: 'https://api.swiggy.com', // Specify the base URL of the Swiggy API
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ''),
       },
@@ -16,3 +13,4 @@ export default defineConfig({
   },
   plugins: [react()],
 })
+

@@ -33,8 +33,8 @@ function Search() {
   // console.log("totalImages:-", totalImages);
 
   return (
-    <div className="md:min-h-[568px] mt-[30px] relative md:text-center">
-      <div className="lg:h-[67.3vh] md:h-[67.2vh]">
+    <div className="md:min-h-[569px] mt-[30px] relative md:text-center">
+      <div className="lg:h-[67.5vh] md:h-[67.5vh]">
       <div className="relative ">
         <input
           className="outline-none pt-[15px] pb-[15px] pl-[20px] mt-[30px] ml-[30px] md:w-[520px] lg:w-[600px] border border-solid border-[#DFE0E3] rounded-[3px] text-[18px] m-auto"
