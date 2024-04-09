@@ -1,0 +1,222 @@
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
+  top: 40px;
+  margin-bottom: 80px;
+  /* margin-left: 2px; */
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.shimmer-card {
+  width: 275px;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-color: #d3d5df;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+  border-radius: 10px;
+}
+.shimmer-title {
+  border-radius: 8px;
+  width: 60%;
+  margin-top: 10px;
+}
+.shimmer-tags {
+  border-radius: 8px;
+  width: 70%;
+  margin-top: 9px;
+}
+.shimmer-details {
+  border-radius: 8px;
+  width: 95%;
+  margin-top: 12px;
+}
+.shimmer-container .shimmer-img {
+  border-radius: 8px;
+  margin-top: 20px;
+  height: 170px;
+  width: 250px;
+}
+
+/** Aniimation to shimmer card component **/
+.stroke {
+  height: 15px;
+  background: #777;
+}
+.animate {
+  animation: shimmer 3s;
+  animation-iteration-count: infinite;
+  background: linear-gradient(to right, #e6e6e6 5%, #cccccc 25%, #e6e6e6 35%);
+  background-size: 1000px 100%;
+}
+@keyframes shimmer {
+  from {
+    background-position: -1000px 0;
+  }
+  to {
+    background-position: 1000px 0;
+  }
+}
+
+/****shimmer menu******/
+.restaurant-summary {
+  position: relative;
+  /* border: 0.5px solid blue;  */
+  border: 1px solid #d3d5df;
+  margin-top: 20px;
+  height: 260px;
+  width: 600px;
+  border-radius: 10px;
+}
+.shimmer-img {
+  /* border: 0.5px solid blue; */
+  margin-top: 10px;
+  margin-left: 10px;
+  border-radius: 10px;
+  height: 238px;
+  width: 230px;
+}
+.restaurant-summary-details {
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+  border-radius: 8px;
+  position: absolute;
+  top: 1px;
+  left: 260px;
+  height: 257px;
+  width: 700px;
+}
+.name {
+  border: 1px solid #d3d5df;
+  border-radius: 6px;
+  height: 39px;
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 9px;
+}
+.cuisin {
+  border: 1px solid #d3d5df;
+  margin-left: 9px;
+  border-radius: 6px;
+  height: 37px;
+  width: 240px;
+  margin-top: 10px;
+}
+.areaname {
+  border: 1px solid #d3d5df;
+  margin-left: 9px;
+  border-radius: 6px;
+  height: 35px;
+  width: 230px;
+  margin-top: 10px;
+}
+.rating {
+  position: absolute;
+  right: 10px;
+  top: 70px;
+  border: 1px solid #d3d5df;
+  height: 60px;
+  width: 85px;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+.cosfortwo {
+  border: 1px solid #d3d5df;
+  border-radius: 6px;
+  margin-left: 9px;
+  margin-right: 5px;
+  height: 40px;
+  margin-top: 49px;
+  width: 330px;
+}
+.shimmer-w40 {
+  width: 697px;
+  height: 47px;
+  margin-left: -47px;
+  border-radius: 8px;
+}
+
+.shimmer-menu-card {
+  border: 2px solid #d3d5df;
+  border-radius: 8px;
+  margin: auto;
+  display: flex;
+  justify-content: space-evenly;
+  width: 700px;
+  height: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 4px 7px 0 rgb(218 220 230 / 60%);
+}
+.shimmer-item-details {
+  width: 438px;
+}
+
+.shimmer-img-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  width: 118px;
+  height: 150px;
+}
+.shimmer-img-wrapper .shimmer-img {
+  width: 118px;
+  height: 96px;
+}
+
+/*****Error Page********/
+.error{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.gif{
+  position: relative;
+  z-index: 200;
+  background-image: url(https://cdn.dribbble.com/users/285475/screenshots/2083086/dribbble_1.gif);
+  height: 400px;
+  width: 100vw;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.gif h1{
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size:80px;
+  top: 10px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+.message{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.message h3{
+  font-size:40px;
+  text-align: center;
+}
+.message p{
+  font-size: 20px;
+  text-align: center;
+}
+.message .btn{			
+    color: #fff;
+    padding: 10px 20px;
+    background: #39ac31;
+    margin: 20px 0;
+    display: inline-block;
+    text-decoration: none;
+  }
+  .message .btn:hover{
+    background: #1c6916;
+    cursor: pointer;
+
+  }
