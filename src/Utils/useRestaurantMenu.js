@@ -17,7 +17,7 @@ function useRestaurantMenu(resId) {
     const fetchResMenu = async () => {
 
         try {
-            const response = await axios.get(`/api/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
+            const response = await axios.get(import.meta.env.VITE_BASE_URL + `/api/proxy/swiggy/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.9351929&lng=77.62448069999999&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
     
             const data = await response?.data?.data?.cards
             console.log("data;", data);

@@ -24,4 +24,7 @@ __test__
 *.sln
 *.sw?
 
+
 /coverage
+
+.env
